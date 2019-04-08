@@ -19,7 +19,7 @@ public class BgMove : MonoBehaviour
     /// <summary>
     /// 移动距离
     /// </summary>
-    public float off;
+    private float off;
     // Start is called before the first frame update
     void Start()
     {
@@ -60,11 +60,11 @@ public class BgMove : MonoBehaviour
     IEnumerator Bgmove()
     {
         //滚动背景
-        float move = 10.0f;//移动速度
+        float move = 5.0f;//移动速度
         Vector3 pos = bgPos.transform.localPosition;
         pos.x -= move;
         //控制移动范围（超过画布归零）
-        if (pos.x < -1280)
+        if (pos.x < -800)
         {
             pos.x = 0;
         }
