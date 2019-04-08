@@ -19,6 +19,9 @@ public class CameraFollowGameObject : MonoBehaviour {
                     Time.deltaTime * MainCameraMoveSpeed);
 
     }
-
+    void LateUpdate()
+    {
+        
+    }
   
 }

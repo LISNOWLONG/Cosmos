@@ -20,10 +20,12 @@ public class BgMove : MonoBehaviour
     /// 移动距离
     /// </summary>
     private float off;
+
+    public CameraFollowGameObject cameraGame;
     // Start is called before the first frame update
     void Start()
     {
-
+        //cameraGame.enabled = false;
     }
 
     // Update is called once per frame
@@ -64,7 +66,7 @@ public class BgMove : MonoBehaviour
         Vector3 pos = bgPos.transform.localPosition;
         pos.x -= move;
         //控制移动范围（超过画布归零）
-        if (pos.x < -800)
+        if (pos.x < -600)
         {
             pos.x = 0;
         }
